@@ -1,10 +1,15 @@
 //! Polyfill for Concat
-String.prototype.myConcat = function (...args) {
-  let result = [this];
-  for (let i = 0; i < args.length; i++) {
-    result.push(args[i]);
+String.prototype.myConcat = function (arguments) {
+  var concatenatedString = this.valueOf();
+
+  for (var i = 0; i < arguments.length; i++) {
+    concatenatedString += arguments[i];
   }
-  return result;
+
+  return concatenatedString;
+
+  //! OR
+  // return this + arguments;
 };
 
 const str1 = "Hello";
