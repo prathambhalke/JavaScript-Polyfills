@@ -12,3 +12,7 @@ String.prototype.myRepeat = function (count) {
 
 let str = "hello";
 console.log(str.myRepeat(2));
+let str2 = "brother";
+console.log(str2.myRepeat(5));
+let str3 = "sister";
+console.log(str3.myRepeat(-1));
